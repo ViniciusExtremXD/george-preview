@@ -1,0 +1,1 @@
+const s="BRL";function c(e){return e.currency||s}function a(e){const r=new Map;for(const n of e){const o=c(n);r.set(o,(r.get(o)??0)+1)}const t=[...r.entries()].sort((n,o)=>o[1]-n[1])[0];return(t==null?void 0:t[0])??s}function u(e,r){const t=[],n=[];for(const o of e)(c(o)===r?t:n).push(o);return{daMoeda:t,deOutraMoeda:n}}export{a as m,u as s};

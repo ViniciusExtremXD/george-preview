@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Exclusão de Dados — George</title>
+<meta name="description" content="Como apagar sua conta, seus lançamentos financeiros e o histórico de mensagens do George. Pedido gratuito, sem justificativa, concluído em até 30 dias (art. 18 da LGPD)." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://www.georgefinance.com.br/exclusao-de-dados.html" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.georgefinance.com.br/exclusao-de-dados.html" />
+<meta property="fb:app_id" content="2034871374067873" />
+<meta property="og:title" content="Exclusão de Dados — George" />
+<meta property="og:description" content="Como apagar sua conta, seus lançamentos financeiros e o histórico de mensagens do George. Pedido gratuito, sem justificativa, concluído em até 30 dias." />
+
+<!--
+  POR QUE ESTE ARQUIVO EXISTE, E POR QUE ELE É HTML ESTÁTICO.
+
+  A Meta exige uma URL de instruções de exclusão de dados no app do WhatsApp
+  Business. O campo dela não aceita qualquer URL: ela RASPA o endereço e guarda
+  o resultado em cache. Medido no Depurador de Compartilhamento em 26/07/2026:
+  a rota de SPA /exclusao-de-dados devolveu 403 para o raspador da Meta, e a
+  partir daí o campo passou a recusar aquela URL com a mensagem
+  "should represent a valid URL" — para sempre, porque o 403 ficou cacheado.
+  URLs que a Meta nunca raspou passam na hora. Foi assim que o mecanismo ficou
+  claro: o validador não olha o formato, olha o cache do raspador.
+
+  Além disso, as rotas do app carregam por lazy() no React Router. O HTML
+  servido é o shell do Vite: `grep -ci exclus` no corpo entregue ao
+  facebookexternalhit dava ZERO. Um revisor da Meta abrindo aquela URL com
+  JavaScript desligado não via uma linha sobre exclusão de dados.
+
+  Este arquivo resolve as duas coisas de uma vez: mora em public/, então é
+  servido direto pelo CDN como HTML de verdade, com o conteúdo dentro do corpo
+  da resposta. Sem JavaScript, sem fonte externa, sem imagem remota — nada que
+  possa falhar para um raspador.
+
+  A PÁGINA CANÔNICA PARA HUMANOS CONTINUA SENDO /exclusao-de-dados (React), que
+  tem índice, navegação e o resto do site em volta. Esta é a versão que a
+  máquina lê. Se o texto de lá mudar, mude aqui também: o link no fim aponta
+  para lá justamente para que a divergência apareça.
+
+  Os valores abaixo vêm de src/lib/site.ts (COMPANY_NAME, COMPANY_CNPJ,
+  EMAIL_DPO, LEGAL_LAST_UPDATED). Arquivo estático não importa TypeScript, então
+  aqui eles estão escritos à mão — é a única duplicação, e é deliberada.
+-->
+
+<style>
+  :root {
+    --tinta: #0b1f17;
+    --tinta-suave: #3d5c50;
+    --papel: #ffffff;
+    --linha: #dfe8e3;
+    --realce: #00734a;
+    --aviso-fundo: #fff8e6;
+    --aviso-linha: #e5c26b;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --tinta: #e2ffee;
+      --tinta-suave: #9dbfae;
+      --papel: #06120d;
+      --linha: #1c332a;
+      --realce: #00fa9a;
+      --aviso-fundo: #1f1a08;
+      --aviso-linha: #6b5620;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 2.5rem 1.25rem 5rem;
+    background: var(--papel);
+    color: var(--tinta);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  main { max-width: 44rem; margin: 0 auto; }
+  h1 { font-size: 1.9rem; line-height: 1.2; letter-spacing: -0.02em; margin: 0 0 0.5rem; }
+  h2 { font-size: 1.15rem; line-height: 1.3; margin: 2.5rem 0 0.75rem; padding-top: 1.5rem; border-top: 1px solid var(--linha); }
+  h2:first-of-type { border-top: 0; padding-top: 0; }
+  p, li { color: var(--tinta-suave); }
+  p { margin: 0 0 1rem; }
+  ul, ol { margin: 0 0 1rem; padding-left: 1.35rem; }
+  li { margin-bottom: 0.5rem; }
+  strong { color: var(--tinta); font-weight: 600; }
+  a { color: var(--realce); text-decoration: underline; text-underline-offset: 3px; }
+  .meta { font-size: 0.85rem; color: var(--tinta-suave); margin: 0 0 2rem; }
+  .destaque {
+    border: 1px solid var(--linha);
+    border-left: 3px solid var(--realce);
+    border-radius: 6px;
+    padding: 1rem 1.15rem;
+    margin: 0 0 1.75rem;
+  }
+  .destaque p:last-child { margin-bottom: 0; }
+  .aviso {
+    background: var(--aviso-fundo);
+    border: 1px solid var(--aviso-linha);
+    border-radius: 6px;
+    padding: 0.9rem 1.15rem;
+    margin: 0 0 1.5rem;
+  }
+  .aviso p { margin: 0; }
+  footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--linha); font-size: 0.85rem; }
+  footer p { margin: 0 0 0.5rem; }
+</style>
+</head>
+<body>
+<main>
+
+  <h1>Exclusão de Dados</h1>
+  <p class="meta">
+    George, da Rampin Technology · Atualizado em 25 de julho de 2026
+  </p>
+
+  <div class="destaque">
+    <p>
+      <strong>Caminho mais rápido:</strong> envie um e-mail para
+      <a href="mailto:contato.tech@rampintechnology.com.br?subject=Exclus%C3%A3o%20de%20dados%20%E2%80%94%20George">contato.tech@rampintechnology.com.br</a>
+      com o assunto <strong>“Exclusão de dados — George”</strong>, a partir do endereço
+      cadastrado na sua conta.
+    </p>
+    <p>
+      Confirmamos o recebimento em até <strong>5 dias úteis</strong> e concluímos a exclusão
+      em até <strong>30 dias</strong>. Você não precisa justificar o pedido, e a exclusão é
+      gratuita (art. 18 da LGPD, Lei nº 13.709/2018).
+    </p>
+  </div>
+
+  <h2>1. Excluir a conta e todos os dados</h2>
+  <p>
+    Esta é a exclusão completa: apaga o cadastro, o histórico financeiro e o vínculo com o
+    WhatsApp.
+  </p>
+  <ul>
+    <li>
+      Escreva para
+      <a href="mailto:contato.tech@rampintechnology.com.br?subject=Exclus%C3%A3o%20de%20dados%20%E2%80%94%20George">contato.tech@rampintechnology.com.br</a>
+      usando o <strong>mesmo e-mail cadastrado</strong> no George — é assim que confirmamos
+      que o pedido é seu.
+    </li>
+    <li>
+      Informe o <strong>número de WhatsApp vinculado</strong>, se houver, para apagarmos
+      também o histórico de mensagens.
+    </li>
+    <li>
+      Se não conseguir usar o e-mail cadastrado, podemos pedir outra confirmação de
+      identidade antes de executar a exclusão — é uma proteção contra pedidos de terceiros.
+    </li>
+  </ul>
+  <div class="aviso">
+    <p>
+      <strong>A exclusão é definitiva.</strong> Não há como recuperar lançamentos, metas,
+      parcelamentos ou relatórios depois dela. Se quiser guardar seus dados, exporte os
+      relatórios antes de pedir a exclusão.
+    </p>
+  </div>
+
+  <h2>2. Só parar de usar o WhatsApp, mantendo a conta</h2>
+  <p>
+    Se você quer continuar usando o app, mas deixar de conversar com o George pelo WhatsApp,
+    basta desvincular o número em <strong>Configurações → WhatsApp → Desvincular número</strong>.
+    A partir daí paramos de enviar mensagens para aquele número, e ele deixa de ser aceito
+    como canal de lançamento. Você também pode simplesmente bloquear o nosso número no
+    WhatsApp — nesse caso a Meta interrompe a entrega.
+  </p>
+
+  <h2>3. Apagar lançamentos específicos</h2>
+  <p>
+    Você não precisa excluir a conta para apagar um registro errado. Dentro do app, cada
+    despesa, receita, parcelamento, meta e investimento pode ser editado ou excluído
+    individualmente, a qualquer momento.
+  </p>
+
+  <h2>4. Prazos</h2>
+  <ul>
+    <li><strong>Até 5 dias úteis</strong> — confirmamos por e-mail que recebemos o pedido.</li>
+    <li><strong>Até 30 dias corridos</strong> — os dados pessoais são eliminados dos bancos de dados de produção.</li>
+    <li><strong>Até 90 dias</strong> — os dados também desaparecem das rotinas de backup, conforme o ciclo de rotação das cópias de segurança.</li>
+  </ul>
+
+  <h2>5. O que é apagado</h2>
+  <ul>
+    <li>Nome, e-mail e número de telefone.</li>
+    <li>Todos os lançamentos financeiros: receitas, despesas, categorias, metas, investimentos e parcelamentos.</li>
+    <li>Histórico de mensagens trocadas com o George no WhatsApp, incluindo textos, transcrições de áudio e imagens enviadas.</li>
+    <li>Tokens de integração com o Google (autenticação e Calendar) e os eventos que o George criou no seu calendário a seu pedido.</li>
+    <li>Preferências, notificações e chamados de suporte.</li>
+  </ul>
+
+  <h2>6. O que pode ser retido, e por quê</h2>
+  <p>
+    Em hipóteses limitadas a lei exige que alguns dados sejam guardados mesmo após a exclusão
+    da conta (art. 16 da LGPD):
+  </p>
+  <ul>
+    <li>
+      <strong>Registros fiscais e de pagamento</strong> — mantidos pelo prazo legal aplicável.
+      As informações de cobrança ficam com a Paddle, nossa Merchant of Record, sujeitas à
+      política de retenção dela.
+    </li>
+    <li>
+      <strong>Registros de acesso</strong> — mantidos por 6 meses, conforme o art. 15 do
+      Marco Civil da Internet (Lei nº 12.965/2014).
+    </li>
+    <li>
+      <strong>Dados necessários ao exercício regular de direitos</strong> — em caso de
+      disputa judicial ou administrativa em curso.
+    </li>
+  </ul>
+  <p>
+    Fora dessas hipóteses, nada é mantido. Dados usados para estatística são
+    <strong>anonimizados</strong> de forma irreversível, deixando de ser dados pessoais.
+  </p>
+
+  <h2>7. Dados que passaram pela Meta e pelo WhatsApp</h2>
+  <p>
+    O George funciona sobre a WhatsApp Business Platform. Quando você nos envia uma mensagem,
+    ela trafega pela infraestrutura da Meta antes de chegar aos nossos servidores. Pedir a
+    exclusão aqui apaga o que está <strong>com o George</strong>: o histórico nos nossos
+    bancos de dados e o vínculo do seu número. A cópia que fica no aplicativo do WhatsApp no
+    seu celular é sua, e você apaga direto na conversa. Os dados retidos pela própria Meta
+    seguem a política dela, e o pedido tem de ser feito a ela.
+  </p>
+
+  <h2>8. Dúvidas</h2>
+  <p>
+    Escreva para
+    <a href="mailto:contato.tech@rampintechnology.com.br">contato.tech@rampintechnology.com.br</a>.
+    O mesmo endereço atende o encarregado pelo tratamento de dados pessoais
+    (art. 41 da LGPD).
+  </p>
+
+  <footer>
+    <p>
+      <strong>Rampin Technology</strong> · 64.428.376 João Vitor Rampin Sartorelli ·
+      CNPJ 64.428.376/0001-84 · controladora dos dados. Encarregado pelo
+      tratamento de dados pessoais: João Vitor Rampin Sartorelli.
+    </p>
+    <p>
+      Versão completa, com índice e navegação:
+      <a href="https://www.georgefinance.com.br/exclusao-de-dados">georgefinance.com.br/exclusao-de-dados</a>
+      · <a href="https://www.georgefinance.com.br/politica-de-privacidade">Política de Privacidade</a>
+      · <a href="https://www.georgefinance.com.br/termos">Termos de Uso</a>
+    </p>
+    <p>
+      O George é um assistente de organização financeira. Não é instituição financeira, não
+      movimenta dinheiro e não se conecta à sua conta bancária.
+    </p>
+  </footer>
+
+</main>
+</body>
+</html>
